@@ -1,0 +1,26 @@
+<section id="products" class="products">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="products__filters">
+        <button
+          *ngFor="let category of categories"
+          [class.active]="category === selectedCategory"
+          (click)="filterProducts(category)"
+       class="filter-btn" >
+          {{ category }}
+        </button>
+      </div>
+      <div class="products__grid">
+        <div *ngFor="let product of filteredProducts" class="product-card">
+          <img [src]="product.image" [alt]="product.name" class="product-card__image" />
+          <div class="product-card__content">
+            <h3 class="product-card__title">{{ product.name }}</h3>
+            <p class="product-card__description">{{ product.description }}</p>
+            <p class="product-card__price">${{ product.price }}</p>
+            <button (click)="addToCart(product)" class="btn btn--primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

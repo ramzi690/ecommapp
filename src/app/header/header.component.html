@@ -1,0 +1,14 @@
+<header class="header">
+  <nav class="nav container">
+    <a routerLink="/" class="nav__logo">Shop</a>
+    <ul class="nav__list">
+      <li><a routerLink="/home" class="nav__link">Home</a></li>
+      <li><a routerLink="/products" class="nav__link">Products</a></li>
+      <li><a routerLink="/categories" class="nav__link">Categories</a></li>
+    </ul>
+    <button class="cart-btn" (click)="openCart()">
+      <span class="cart-count">{{ cartItemCount }}</span>
+      <img src="https://th.bing.com/th/id/R.d3b0d49c4eb466d23bdb9d6e951558a5?rik=pcNdi8PSsgz16g&pid=ImgRaw&r=0" alt="Cart" class="cart-icon" />
+    </button>
+  </nav>
+</header>
